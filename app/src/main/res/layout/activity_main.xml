@@ -9,11 +9,12 @@
     tools:context=".MainActivity">
 
     <com.hj.passwprdview.PasswordEditText
+        android:id="@+id/psd_edit"
         android:layout_width="300dp"
         android:layout_height="50dp"
         app:inputMaxNumber="6"
         app:inputBoxType="continuous"
-        android:inputType="phone"
+        android:inputType="number"
         android:background="#8FD882"/>
 
     <com.hj.passwprdview.PasswordEditText
@@ -22,7 +23,7 @@
         android:layout_height="50dp"
         app:inputMaxNumber="6"
         app:inputBoxType="interval"
-        android:inputType="phone"
+        android:inputType="number"
         android:background="#8FD882"/>
 
 </LinearLayout>

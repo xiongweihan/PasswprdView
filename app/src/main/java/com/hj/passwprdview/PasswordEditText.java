@@ -200,5 +200,18 @@ public class PasswordEditText extends AppCompatEditText {
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
         // 获取当前输入位置
         editPosition = text.length();
+        if(text.length() == count && changedListener != null){
+            changedListener.sizeOkClick(text.toString());
+        }
+    }
+
+    public interface onTextChangedListener{
+        void sizeOkClick(String text);
+    }
+
+    public onTextChangedListener changedListener;
+
+    public void setOnTextChangedListener(onTextChangedListener changedListener){
+        this.changedListener = changedListener;
     }
 }
